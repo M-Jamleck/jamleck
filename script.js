@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+ // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -11,25 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Form submission handling
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        console.log('Form submitted:', data);
-        
-        // Show success message
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
-    });
-}
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
@@ -55,19 +36,40 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Add animation to service cards on scroll
+// Add animation to elements on scroll
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Stop observing once animated
         }
     });
 }, observerOptions);
 
+// Observe all sections and cards
+document.querySelectorAll('section, .service-card, .portfolio-item, .testimonial-card').forEach(element => {
+    observer.observe(element);
+});
+
+// Add hover effect to service cards
 document.querySelectorAll('.service-card').forEach(card => {
-    observer.observe(card);
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+});
+
+// Add loading animation to images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', () => {
+        img.classList.add('loaded');
+    });
 });
