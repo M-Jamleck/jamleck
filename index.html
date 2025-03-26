@@ -1,69 +1,99 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
+    <title>Portfolio | Data Visualization Expert</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Your Logo</div>
+        <div class="logo">YOUR NAME</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#intro">Intro</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header id="home" class="hero">
+    <header id="intro" class="hero">
         <div class="hero-content">
-            <h1>Welcome to Our Website</h1>
-            <p>Create something amazing with us</p>
-            <button class="cta-button">Get Started</button>
+            <h1>👋 Hi! I'm a freelance <strong>senior software engineer</strong> specializing in <strong>data visualization</strong>.</h1>
+            <p>I've worked for prestigious research centers and top-tier companies. I've also developed extensive <strong>educational content</strong> that you might benefit from. ❤️</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Contact</a>
+                <a href="#portfolio" class="cta-button secondary">View Portfolio</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <p>We are a passionate team dedicated to creating amazing digital experiences.</p>
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Talking</h3>
+                <p>Hire me to talk about programming or data visualization. I ❤️ it!</p>
+            </div>
+            <div class="service-card">
+                <h3>Consulting</h3>
+                <p>Need a custom interactive graph? Some R or React work? Creating beautiful reports with Quarto?</p>
+            </div>
+            <div class="service-card">
+                <h3>Teaching & Training</h3>
+                <p>Short talks or multi-day courses on dataviz, R, ggplot2, data analytics and more.</p>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Web Design</h3>
-                <p>Beautiful and responsive websites</p>
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="placeholder1.jpg" alt="Project 1">
+                <h3>Project Title</h3>
+                <p>Project description goes here. Brief overview of what was accomplished.</p>
+                <div class="portfolio-links">
+                    <a href="#" class="link-button">View Project</a>
+                    <a href="#" class="link-button">GitHub</a>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Development</h3>
-                <p>Custom web applications</p>
+            <!-- Add more portfolio items as needed -->
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"[Testimonial text goes here]"</p>
+                <cite>- Person Name, Position</cite>
             </div>
-            <div class="service-card">
-                <h3>Marketing</h3>
-                <p>Digital marketing solutions</p>
-            </div>
+            <!-- Add more testimonials as needed -->
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <h2>Contact</h2>
+        <div class="contact-content">
+            <p>Feel free to contact me for any question. For open source projects, please open an issue or pull request on GitHub.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="mailto:your.email@example.com" class="social-link">Email</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>Copyright © 2024 Your Name</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
